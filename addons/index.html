@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Vault | WoTLK Addons</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bigfoot.min.js"></script>
+    
+    <!-- Search Function -->
+    <script>
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#table tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="subsection">
+    <div class="Overlay"><mark>Work in Progress</mark></div>
+    <div id="searchbar">
+        <h1>Addons / <a id=header href="https://wowvault.github.io/wotlk/macros">Macros</a></h1>
+        <input id="search" type="text" placeholder="Search...">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>SS</th>
+                <th>Get</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+            <tr id="skada">
+                <td>Skada</td>
+                <td>A better combat log parser than Recount, because Discipline Priests need to have their ego appeased too. <sup id="fnref:Skada"><a href="#fn:Skada" rel="footnote">Skada</a></sup></td>
+                <td><a href="../assets/img/addons/Skada.png" data-lightbox="Skada">📷</a></td>
+                <td><a href="https://github.com/bkader/Skada-Revisited/archive/main.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+            <tr id="weakauras">
+                <td>WeakAuras</td>
+                <td>Provides a powerful framework to display customizable graphics on your screen.</td>
+                <td><a href="../assets/img/addons/WeakAuras-1.gif" data-lightbox="WeakAuras">📷</a>
+                    <a href="../assets/img/addons/WeakAuras-2.gif" data-lightbox="WeakAuras"></a></td>
+                <td><a href="https://github.com/Bunny67/WeakAuras-WotLK/archive/master.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>Ran into a problem, or have ideas for improvement? Create an issue, or a pull request on <a href="https://github.com/wowvault/wotlk">Github</a>.</footer>
+    
+    <!-- Scripts -->
+    <script src="../assets/js/lightbox.js"></script>
+    <script src="../assets/js/vanilla-back-to-top.min.js"></script>
+
+    <!-- Initiate Back to Top -->
+    <script>
+        addBackToTop({
+            diameter: 50,
+            backgroundColor: 'var(--background-alt)',
+            textColor: 'var(--text-main)'
+        })
+    </script>
+
+    <!-- Initiate a Warning Before Download -->
+    <script>
+        function ThirdPartyWarning() {
+            alert("You'll be downloading this addon from its original source that hasn't been vetted by me. Download and use it at your own peril.");
+        }
+    </script>
+
+    <!-- Initiate Lightbox -->
+    <script>
+        lightbox.option({
+            'showImageNumberLabel': false,
+            'resizeDuration': 250,
+            'fadeDuration': 250,
+            'imageFadeDuration': 250
+            })
+    </script>
+    
+    <!-- Initiate Bigfoot -->
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+
+    <!-- Footnotes -->
+    <div class="footnotes"><ol><li class="footnote" id="fn:Skada"><p>This version of Skada is modified by a group of enthusiast. I personally think this version is an improvement over the original one, so I put it up as the default download option on this website. The differences over the original ones are <a href="https://github.com/bkader/Skada-Revisited">documented here</a>. If you'd still like to download the original version for your own reasons, you can do so by <a href="https://github.com/wowvault/wotlk/raw/master/addons/Skada.zip">click here</a>.<a href="#fnref:Skada" title="return to article"> ↩</a><p></li></ol></div>
+</body>
+</html>
