@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Vault | WoTLK Addons</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bigfoot.min.js"></script>
+    
+    <!-- Search Function -->
+    <script>
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#table tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="subsection">
+    <div id="searchbar">
+        <h1>Addons / <a id=header href="https://wowvault.github.io/wotlk/macros">Macros</a></h1>
+        <input id="search" type="text" placeholder="Search...">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>SS</th>
+                <th>Get</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+            <tr id="details">
+                <td>Details</td>
+                <td>Damage meter. An alternative to both Recount and Skada.</td>
+                <td><a href="../assets/img/addons/Details.png" data-lightbox="Details">📷</a></td>
+                <td><a href="https://github.com/Bunny67/Details-WotLK/archive/master.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+            <tr id="elvui">
+                <td>ElvUI</td>
+                <td>A complete addon package.</td>
+                <td><a href="https://user-images.githubusercontent.com/590348/77227304-65774780-6b90-11ea-9f64-432786d2a597.jpg" data-lightbox="ElvUI">📷</a>
+                    <a href="https://user-images.githubusercontent.com/590348/77227057-4d9ec400-6b8e-11ea-8672-29789434b9fe.jpg" data-lightbox="ElvUI"></a>
+                    <a href="https://user-images.githubusercontent.com/590348/77227328-a53e2f00-6b90-11ea-8dd4-a8d7287185e8.jpg" data-lightbox="ElvUI"></a>
+                    <a href="https://user-images.githubusercontent.com/590348/77227309-74f69080-6b90-11ea-9aa1-95c760340e9d.jpg" data-lightbox="ElvUI"></a></td>
+                <td><a href="https://github.com/ElvUI-WotLK/ElvUI/archive/master.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+            <tr id="elvuiplugins">
+                <td>ElvUI Enhanced+</td>
+                <td>A compilation of ElvUI Enhanced and many other plugins. <sup id="fnref:ElvUIPlugins"><a href="#fn:ElvUIPlugins" rel="footnote">ElvUIPlugins</a></sup></td>
+                <td><a href="../assets/img/addons/Details.png" data-lightbox="Details">📷</a></td>
+                <td><a href="https://github.com/Bunny67/Details-WotLK/archive/master.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+            <tr id="skada">
+                <td>Skada</td>
+                <td>A better combat log parser than Recount, because Discipline Priests need to have their ego appeased too. <sup id="fnref:Skada"><a href="#fn:Skada" rel="footnote">Skada</a></sup></td>
+                <td><a href="../assets/img/addons/Skada.png" data-lightbox="Skada">📷</a></td>
+                <td><a href="https://github.com/bkader/Skada-Revisited/archive/main.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+            <tr id="weakauras">
+                <td>WeakAuras</td>
+                <td>Provides a powerful framework to display customizable graphics on your screen.</td>
+                <td><a href="../assets/img/addons/WeakAuras-1.gif" data-lightbox="WeakAuras">📷</a>
+                    <a href="../assets/img/addons/WeakAuras-2.gif" data-lightbox="WeakAuras"></a></td>
+                <td><a href="https://github.com/Bunny67/WeakAuras-WotLK/archive/master.zip" onclick="ThirdPartyWarning()">📥</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>Ran into a problem, or have ideas for improvement? Create an issue, or a pull request on <a href="https://github.com/wowvault/wotlk">Github</a>.</footer>
+    
+    <!-- Scripts -->
+    <script src="../assets/js/lightbox.js"></script>
+    <script src="../assets/js/vanilla-back-to-top.min.js"></script>
+
+    <!-- Initiate Back to Top -->
+    <script>
+        addBackToTop({
+            diameter: 50,
+            backgroundColor: 'var(--background-alt)',
+            textColor: 'var(--text-main)'
+        })
+    </script>
+
+    <!-- Initiate a Warning Before Download -->
+    <script>
+        function ThirdPartyWarning() {
+            alert("You'll be downloading this addon from its original source that hasn't been vetted by me. Download and use it at your own peril.");
+        }
+    </script>
+
+    <!-- Initiate Lightbox -->
+    <script>
+        lightbox.option({
+            'showImageNumberLabel': false,
+            'resizeDuration': 250,
+            'fadeDuration': 250,
+            'imageFadeDuration': 250
+            })
+    </script>
+    
+    <!-- Initiate Bigfoot -->
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+
+    <!-- Footnotes -->
+    <div class="footnotes"><ol><li class="footnote" id="fn:ElvUIPlugins"><p>Complete list of addons in this package: <li>ElvUI_AddOnSkins</li><li>ElvUI_AuraBarsMovers</li><li>ElvUI_BagControl</li><li>ElvUI_CastBarOverlay</li><li>ElvUI_CustomTags</li><li>ElvUI_CustomTweaks</li><li>ElvUI_DataTextColors</li><li>ElvUI_DTBars2</li><li>ElvUI_Enhanced</li><li>ElvUI_EnhancedFriendsList</li><li>ElvUI_ExtraActionBars</li><li>ElvUI_LocPlus</li><li>ElvUI_MicrobarEnhancement</li><li>ElvUI_RaidMarkers</li><li>ElvUI_SwingBar</li><li>ElvUI_VisualProcs</li>.<a href="#fnref:ElvUIPlugins" title="return to article"> ↩</a><p></li></ol></div>
+    <div class="footnotes"><ol><li class="footnote" id="fn:Skada"><p>This version of Skada is modified by a group of enthusiast. I personally think this version is an improvement over the original one, so I put it up as the default download option on this website. The differences over the original ones are <a href="https://github.com/bkader/Skada-Revisited">documented here</a>. If you'd still like to download the original version for your own reasons, you can do so by <a href="https://github.com/wowvault/wotlk/raw/master/addons/Skada.zip">click here</a>.<a href="#fnref:Skada" title="return to article"> ↩</a><p></li></ol></div>
+</body>
+</html>
