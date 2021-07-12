@@ -1,3 +1,14 @@
 # WoTLK Vault
 
-This will be where I'll be hosting my WoTLK vault. I'm currently not playing this expansion, but when I do in the not so distant future, I'll be hosting the vault here.
+This is a vault where I collect/backup everything WoTLK. Unless noted otherwise, assume everything is for the 3.3.5a patch. However, since there's little to no compatibility issues between the patches of TBC, that shouldn't stop you from trying things out. I have not encountered any issues on my own between patches.
+
+# Websites
+
+Some sections of this vault have a website of their own. These are:
+
+- [Addons](https://wowvault.github.io/wotlk/addons)
+- [Macros](https://wowvault.github.io/wotlk/macros)
+
+# Contributions
+
+If you run into an issue or have ideas for improvement, please create an issue or a pull request respectively. Be warned, however, that I will be pretty stingy with merging pull requests (if I ever get one) because while this repository is here to help anyone, it's mostly here to help me and I'm very particular about things. You're always welcome to create forks.
